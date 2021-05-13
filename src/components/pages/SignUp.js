@@ -44,12 +44,12 @@ async function SignUp(){
   }
   else {alert('Request submitted successfully')}
   console.warn(item)
-  let result = await fetch("http://localhost:4000/users", {
+  let result = await fetch("https://gasup-project.herokuapp.com/users", {
     method: "POST",
     body: JSON.stringify(item),
     headers: {
       "Content-Type": "application/json",
-      "Accept": "application/json"
+      Accept: "application/json",
     },
   });
   result = await result.json()

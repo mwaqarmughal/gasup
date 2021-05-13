@@ -43,12 +43,12 @@ async function partner(){
 
   console.warn(item)
   
-  let result = await fetch("http://localhost:4000/partnership", {
+  let result = await fetch("https://gasup-project.herokuapp.com/partnership", {
     method: "POST",
     body: JSON.stringify(item),
     headers: {
       "Content-Type": "application/json",
-      "Accept": "application/json"
+      Accept: "application/json",
     },
   });
   result = await result.json()

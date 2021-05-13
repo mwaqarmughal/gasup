@@ -35,7 +35,7 @@ async function Comp() {
     alert("Request submitted successfully");
   }
   console.warn(item);
-  let result = await fetch("http://localhost:4000/complaints", {
+  let result = await fetch("https://gasup-project.herokuapp.com/complaints", {
     method: "POST",
     body: JSON.stringify(item),
     headers: {
