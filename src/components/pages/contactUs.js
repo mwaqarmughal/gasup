@@ -1,13 +1,88 @@
-import React, { useEffect} from "react";
-import "../../App.css";
-import Footer from "../footer";
+ import React, { useEffect} from "react";
+// import "../../App.css";
+import "boxicons";
+import  Icon from "@iconify/react";
+import bxsChevronMap from "@iconify-icons/bx/bxs-map";
+import bxsChevronEnvelope from "@iconify-icons/bx/bxs-envelope";
+import bxsChevronPhone from "@iconify-icons/bx/bxs-phone";
+import Footer from "../Footer";
 import './contactUs.css'
+
 function ContactUs() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div>
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Contact</h2>
+            <h3>
+              <span>Contact Us</span>
+            </h3>
+            <p>
+              Contacting our team is quite easy. Just choose either of three
+              optioins to contact us anytime.
+            </p>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6">
+              <div class="info-box mb-4">
+                <Icon class="icon" icon={bxsChevronMap} />
+                <h3>Our Address</h3>
+                <p>
+                  Defence Road، Off Raiwind Rd, Lda Avenue Phase 1, Lahore,
+                  Punjab 54000
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box  mb-4">
+                <Icon class="icon" icon={bxsChevronEnvelope} />
+
+                <h3>Email Us</h3>
+                <p>contact@gasup.com</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="info-box  mb-4">
+                <Icon class="icon" icon={bxsChevronPhone} /><h3>Call Us</h3>
+                <p>+92 300 1234567</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
+}
+
+export default ContactUs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <video id="videoBG" autoplay="true" muted loop className=" bghandleVideo">
+        <source src={BgVideo} type="video/mp4"></source>
+      </video>
       <div className="container text-center background-height">
         <h1 className="m-4 text-center">Contact Us</h1>
         <div className="row lead">
@@ -57,10 +132,4 @@ function ContactUs() {
         </h3>
       </div>
       <div>
-        <Footer />
-      </div>
-    </div>
-  );
-}
-
-export default ContactUs;
+    </div> */

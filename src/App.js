@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
 import Home from './components/pages/Home';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 import HowItWork from './components/pages/howItWork';
 import Partnership from './components/pages/partnership';
 import Complaints from './components/pages/complaints';
@@ -41,7 +41,7 @@ function App() {
           />
 
 
-          <Footer />
+          <Footer/>
         </Switch>
       </Router>
     </>

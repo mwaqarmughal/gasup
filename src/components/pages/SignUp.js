@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom';
 import '../../App.css'
-import Footer from '../footer'
+import Footer from '../Footer'
 import './signup.css'
+import BgVideo from "../videos/Free Video Backgrounds, royalty-free video loops.mp4";
+
 // import validation from './signupValidation'
 
 
@@ -37,10 +39,10 @@ async function SignUp(){
       return alert('Password must be more than 8 characters')
     }
     if(!confirmPassword){
-    alert('Password does not match')
+    return alert('Password does not match')
   }
   else if (confirmPassword!== password){
-    return alert("Password must be more than 8 characters");
+    return alert("Incorrect Password");
   }
   else {alert('Request submitted successfully')}
   console.warn(item)
@@ -58,6 +60,15 @@ async function SignUp(){
 }
     return (
       <div>
+        <video
+          id="videoBG"
+          autoplay="true"
+          muted
+          loop
+          className=" bghandleVideo"
+        >
+          <source src={BgVideo} type="video/mp4"></source>
+        </video>
         <div className="container bd-height">
           <h1 className="text-center text-dark m-4 ">Register</h1>
           <div className="row">
@@ -66,7 +77,7 @@ async function SignUp(){
               <div className="form-group">
                 <label for="username">Username</label>
                 <input
-                  type="text" 
+                  type="text"
                   name="username"
                   id="username"
                   className="form-control"
@@ -106,6 +117,9 @@ async function SignUp(){
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+              <small id="username" className="text-muted">
+                Enter the strong password
+              </small>
               <div className="form-group">
                 <label for="confirmPassword">Confirm Password</label>
                 <input
@@ -118,6 +132,10 @@ async function SignUp(){
                   onChange={(e) => setConfirmPassword(e.target.value)}
                 />
               </div>
+              <small id="username" className="text-muted">
+                Enter the password to confirm
+              </small>
+              <br/>
               <button
                 type="submit"
                 className="btn btn-secondary"

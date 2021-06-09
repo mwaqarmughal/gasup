@@ -1,16 +1,16 @@
 import React,{useEffect} from 'react'
 import '../../App.css'
-import Footer from '../footer';
+import Footer from '../Footer';
 import './howItWork.css'
 import ReactPlayer from "react-player";
-
+import BgVideo from '../videos/Free Video Backgrounds, royalty-free video loops.mp4'
 function HowItWork() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
     return (
-      <div>
-        <div className="container text-center background-height">
+      <div className='bg-light'>
+        <div className="container text-center">
           <h1 className="m-4"> How It Works</h1>
           <h4>DOWNLOAD OUR APP, PLACE AN ORDER,</h4>{" "}
           <h4> PIN YOUR LOCATION AND GET</h4>
@@ -21,7 +21,7 @@ function HowItWork() {
             <div className="col-md-6 styled.div position-relative high ">
               {" "}
               <ReactPlayer
-                url="https://www.youtube.com/watch?v=NN08VCBm_zc"
+                url="https://www.youtube.com/watch?v=RFR_7w0S2UY"
                 playing
                 width="100%"
                 height="100%"
@@ -47,7 +47,7 @@ function HowItWork() {
           </div>
         </div>
         <div>
-          <Footer />
+          <Footer/>
         </div>
       </div>
     );

@@ -5,3 +5,13 @@
 .down {
     padding-bottom: 60px;
 }
+.bghandleVideo {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    /* transform: translate(-50%, -50%); */
+    left: 50%;
+    top: 50%;
+    object-fit: cover;
+    z-index: -1;
+}

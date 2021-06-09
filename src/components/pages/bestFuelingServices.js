@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import '../../App.css'
-import Footer from  '../footer'
+import Footer from  '../Footer'
 import "./bestFuelingServices.css";
 
 
